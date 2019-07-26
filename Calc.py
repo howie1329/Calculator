@@ -1,4 +1,7 @@
-print("Calculator")
+# Created and Finished by Howard Thomas
+
+
+calculator_usage = "yes"
 
 
 # Adding
@@ -26,16 +29,30 @@ def printing(x):
     print("The total is" + x)
 
 
+def heading():
+    print("Calculator")
+    print("Created by Howard Thomas in python")
+
+
+def start():
+    global calculator_usage
+    heading()
+    while calculator_usage == "yes":
+        calculator_usage = input("Would you like to use the calculator? (yes/no) ")
+        choices()
+        calculator_usage = input("would you like to use the calculator again? (yes/no) ")
+
+
 # Calculations
-def calc(userinput, x, y):
-    if userinput == 1:
-        add(x, y)
-    elif userinput == 2:
-        sub(x, y)
-    elif userinput == 3:
-        multi(x, y)
-    elif userinput == 4:
-        div(x, y)
+def calc(user_input, num1, num2):
+    if user_input == 1:
+        add(num1, num2)
+    elif user_input == 2:
+        sub(num1, num2)
+    elif user_input == 3:
+        multi(num1, num2)
+    elif user_input == 4:
+        div(num1, num2)
     else:
         print("Wrong input")
         choices()
@@ -48,10 +65,11 @@ def choices():
     print("Please pick a option 1 - 4")
     print("1.) Adding")
     print("2.) Subtraction")
-    print("3.) Mulipcation")
+    print("3.) Multiplication")
     print("4.) Dividing")
     user_input = int(input("What is your choice? "))
     calc(user_input, num1, num2)
 
 
-choices()
+if __name__ == "__main__":
+    start()
