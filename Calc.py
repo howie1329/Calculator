@@ -2,47 +2,47 @@ print("Calculator")
 
 
 # Adding
-def Add(x, y):
+def add(x, y):
     print(int(x + y))
 
 
 # Sub
-def Sub(x, y):
+def sub(x, y):
     print(int(x - y))
 
 
-# Muli
-def Multi(x, y):
+# Multi
+def multi(x, y):
     print(int(x * y))
 
 
 # Dividing
-def Div(x, y):
+def div(x, y):
     print(int(x / y))
 
 
 # Printing
-def Printing(x):
+def printing(x):
     print("The total is" + x)
 
 
 # Calculations
-def Calc(userinput, x, y):
+def calc(userinput, x, y):
     if userinput == 1:
-        Add(x, y)
+        add(x, y)
     elif userinput == 2:
-        Sub(x, y)
+        sub(x, y)
     elif userinput == 3:
-        Multi(x, y)
+        multi(x, y)
     elif userinput == 4:
-        Div(x, y)
+        div(x, y)
     else:
         print("Wrong input")
-        Choices()
+        choices()
 
 
 # Choices
-def Choices():
+def choices():
     num1 = int(input("What is your first number: "))
     num2 = int(input("What is your second number: "))
     print("Please pick a option 1 - 4")
@@ -50,8 +50,8 @@ def Choices():
     print("2.) Subtraction")
     print("3.) Mulipcation")
     print("4.) Dividing")
-    userinput = int(input("What is your choice? "))
-    Calc(userinput, num1, num2)
+    user_input = int(input("What is your choice? "))
+    calc(user_input, num1, num2)
 
 
-Choices()
+choices()
