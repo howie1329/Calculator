@@ -1,3 +1,5 @@
+# Created and Finshed by Howard Thomas
+
 print("Calculator")
 
 
@@ -54,4 +56,7 @@ def choices():
     calc(user_input, num1, num2)
 
 
-choices()
+if __name__ == "__main__":
+    choices()
+
+
